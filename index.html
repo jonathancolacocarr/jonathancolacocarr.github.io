@@ -1,10 +1,38 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
+---
+title: New Page 
+layout: default
+myName: Jonathan Colaco Carr
+title: Categories 
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>{{ page.title }} </h1>
+<div class="nav-wrapper">
+    <div>
+        <p>{{ page.myName }}</p>
+        <h1>Staff</h1>
+
+        <ul>
+          {% for series in site.series %}
+            <li>
+                <h2><a href="{{ series.url }}"></a>{{ series.topic }}</h2>
+              <p>{{ series.content | markdownify }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+
+    </div>
+</div>
+<!--
+You can use HTML elements in Markdown, such as the comment element, and they won't
+be affected by a markdown parser. However, if you create an HTML element in your
+markdown file, you cannot use markdown syntax within that element's contents.
+-->
+</body>
 </html>
+

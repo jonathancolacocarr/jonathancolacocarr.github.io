@@ -1,0 +1,15 @@
+a {
+    color: black
+}
+
+main {
+    width: 50%;
+    max-width: 680px;
+    margin: 0px auto;
+}
+
+nav {
+    width: 50%;
+    max-width: 680px;
+    margin: 4px auto;
+}

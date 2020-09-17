@@ -1,0 +1,14 @@
+---
+layout: default
+title: Categories 
+---
+<h1>Staff</h1>
+
+<ul>
+  {% for series in site.series %}
+    <li>
+        <h2><a href="{{ series.url }}">{{ series.topic }}</a></h2>
+      <p>{{ series.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
